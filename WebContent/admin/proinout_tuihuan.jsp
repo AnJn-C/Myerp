@@ -9,17 +9,17 @@
 </head>
 <body>
 
-<p class="path">当前位置：夜鹰进销存管理系统/退货数据<%=request.getParameter("t").equals("1")?"退货":"换货" %> </p>
-<form action="../proinout" method="post">
+<p class="path">当前位置：夜鹰进销存管理系统/库存管理/商品<%=request.getParameter("t").equals("1")?"入库":"出库" %> </p>
+<form action="../proinout_tuihuan" method="post">
 <input type="hidden" name="t" value="<%=request.getParameter("t")%>"/>
 <input type="hidden" name="tbproid" id="tbproid"/>
 <table border="0" cellspacing="0" cellpadding="0" class="tb">
 	<tr><td class="lable">商品编号</td><td><input type="text" name="tbpronum" id="tbpronum"/><input type="button" id="btnsearch" value="查询" style="width:50px;height:24px;"/> <span class="errormsg" id="errormsg"></span></td></tr>
 	<tr><td class="lable">商品名称</td><td><input type="text" name="tbproname" id="tbproname" readonly="readonly"/></td></tr>
-	<tr><td class="lable">商品类别</td><td><input type="text" name="tbpropath" id="tbpropath"/></td></tr>
-	<tr><td class="lable">商品图片</td><td><img src="" id="proimg"/><input type="hidden" name="tbproimg" id="tbproimg" /></td></tr>
-	<tr><td class="lable"><%=request.getParameter("t").equals("1")?"入库":"出库" %>前数量</td><td><input type="text" name="tbprooldcount" id="tbprooldcount"/></td></tr>
-	<tr><td class="lable"><%=request.getParameter("t").equals("1")?"入库":"出库" %>数量</td><td><input type="text" name="tbprocount" id="tbprocount"/></td></tr>
+	
+	<tr><td class="lable">商品图片</td><td><img style="width:150px;height:50px;" src="" id="proimg"/><input type="hidden" name="tbproimg" id="tbproimg" /></td></tr>
+	
+	<tr><td class="lable"><%=request.getParameter("t").equals("1")?"入退换库":"出库" %>数量</td><td><input type="text" name="tbprocount" id="tbprocount"/></td></tr>
 	<tr><td class="lable">单位</td><td><input type="text" name="tbprounit"/></td></tr>	
 	<tr><td class="lable">&nbsp;</td><td><input type="submit" name="btnsave" value="保存" id="btnsave"/></td></tr>
 </table>

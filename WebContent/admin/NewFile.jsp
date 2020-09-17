@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>	小程序后台管理系统 V1.1</title>
+	<title>	电器仓库进销存管理系统 V1.1</title>
 	<link rel="stylesheet" type="text/css" href="/static/myadmin/css/comm.css" />
     <link rel="stylesheet" type="text/css" href="/static/myadmin/css/login.css"/>
 	<style type="text/css">

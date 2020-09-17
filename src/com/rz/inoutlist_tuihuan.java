@@ -12,16 +12,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class inoutlist
+ * Servlet implementation class inoutlist_tuihuan
  */
-@WebServlet("/inoutlist")
-public class inoutlist extends HttpServlet {
+@WebServlet("/inoutlist_tuihuan")
+public class inoutlist_tuihuan extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public inoutlist() {
+    public inoutlist_tuihuan() {
         super();
         
     }
@@ -41,7 +41,7 @@ public class inoutlist extends HttpServlet {
 			DBHelper Dal = new DBHelper();
 
 			
-			String strSql = " select id from tbinout order by id desc ";
+			String strSql = " select id from tbinout_tuihuan order by id desc ";
 			List<Map<String, Object>> listall = null;
 			List<Object> params = new ArrayList<Object>();
 			try {
@@ -59,7 +59,7 @@ public class inoutlist extends HttpServlet {
 
 			
 			int startindex = pageobj.pagesize * (pageobj.currentpage - 1);
-			String strSqlpager = " select * from tbinout order by id desc limit "
+			String strSqlpager = " select * from tbinout_tuihuan order by id desc limit "
 					+ startindex + "," + pageobj.pagesize + "";
 			List<Map<String, Object>> listpage = null;
 			try {
@@ -70,7 +70,7 @@ public class inoutlist extends HttpServlet {
 			String pagestr = pageobj.GetPageInfo();
 			request.setAttribute("pagestr", pagestr);
 			request.setAttribute("list", listpage);
-			request.getRequestDispatcher("/admin/proinoutlist.jsp").forward(request,
+			request.getRequestDispatcher("/admin/proinoutlist_tuihuan.jsp").forward(request,
 					response);
 	}
 

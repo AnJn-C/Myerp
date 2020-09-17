@@ -52,7 +52,7 @@ a{
 }
 
 .tblist tr:hover{
-	background-color:#ff6600;
+	background-color:#a1e2c3;
 	color:#fff;
 }
 
